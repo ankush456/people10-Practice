@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+
+<head>
+  <meta charset="utf-8">
+  <title>WittyParrot</title>
+  <meta name="description" content="">
+  <!--<meta name="viewport" content="width=device-width">-->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Setting the root where all the files reside -->
+  <base href="/"></base>
+
+
+  <link rel="stylesheet" href="/assets/font/awiconfont.css">
+
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!--<link rel="stylesheet" type="text/css" href="external-libraries/ckeditor/contents.css">-->
+  <link rel="icon" href="favicon.ico" >
+
+  <!-- build:css({.tmp/serve,development}) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="../bower_components/toastr/toastr.css" />
+  <link rel="stylesheet" href="../bower_components/animate.css/animate.css" />
+  <link rel="stylesheet" href="../bower_components/angular-ui-tree/dist/angular-ui-tree.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,development}) styles/app.css -->
+  <!-- inject:css -->
+
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body layout="column" layout-fill>
+  <!--[if lt IE 12]>
+      <link rel="stylesheet" href="app/components/IE_styles.css" />
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div flex layout="column" layout-fill class="main-md-content" ng-controller="MainController">
+
+    <wittyparrot-navbar ng-if="showPageLayout" class="globalNavBar" hidenav-status="hideSideNav">
+    </wittyparrot-navbar>
+    <!--<input type="text" ng-model="hideNavBarr.value">{{hideNavBarr.value}}</input>-->
+    <md-content flex layout="row" class="overflow-h">
+
+      <div flex layout="column" ui-view="main-view" class="UIView"></div>
+    </md-content>
+  </div>
+
+  <!-- build:js(development) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="../bower_components/lodash/lodash.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/restangular/dist/restangular.js"></script>
+  <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.js"></script>
+  <script src="../bower_components/angular-aria/angular-aria.js"></script>
+  <script src="../bower_components/angular-material/angular-material.js"></script>
+  <script src="../bower_components/toastr/toastr.js"></script>
+  <script src="../bower_components/angular-chart.js/dist/angular-chart.js"></script>
+  <script src="../bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+  <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,development}) scripts/app.js -->
+  <!-- inject:js -->
+  <script src="app/index.module.js"></script>
+
+
+  <script src="app/main/main.controller.js"></script>
+  <script src="app/login/login.js"></script>
+  <script src="app/login/login.controller.js"></script>
+  <script src="app/index.run.js"></script>
+  <script src="app/index.route.js"></script>
+  <script src="app/index.constants.js"></script>
+  <script src="app/index.config.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
+  <script src="external-libraries/ckeditor/ckeditor.js"></script>
+  <script src="external-libraries/twitter-text-validator/twitter-text.js"></script>
+</body>
+</html>

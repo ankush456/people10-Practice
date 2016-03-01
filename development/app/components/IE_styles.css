@@ -1,0 +1,4 @@
+.ie-overflow-y{
+	overflow: hidden;
+	overflow-y:auto;
+}

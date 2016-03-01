@@ -1,0 +1,58 @@
+<div flex layout="row" class="LoginContainer" layout-align="center center">
+
+	<div layout="column" class="login-card-container" ng-controller="LoginController">
+		<h1 class="md-title LoginTitle" ng-if="loginUI">Log In</h1>
+		<h1 class="md-title LoginTitle" ng-if="recoveryUI">Forgot Password</h1>
+		<md-card class="md-whiteframe-z1 pad-box-20 LoginCard">
+			<md-content>
+				<form class="pad-box-10 FormInputs" layout="column" method="post"
+							ng-submit="loginForm.$valid && login()"
+							name="loginForm" autocomplete="on"
+							id="loginform" novalidate>
+					<md-input-container md-no-float>
+						<input name="email" type="email" placeholder="E-mail ID"
+									 ng-model="username"
+									 ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$/"
+									 ng-trim="false"
+									 no-spaces required ng-keyup="submitted=false" />
+						<div ng-messages="loginForm.email.$error"
+								 ng-messages-include="error-messages"
+								 ng-if='submitted'>
+							<div ng-message="required">Please enter your email address</div>
+							<div ng-message="pattern">Please enter a valid email address</div>
+						</div>
+					</md-input-container>
+					<md-input-container ng-hide="recoveryUI" md-no-float>
+						<input name="password" type="password" placeholder="Password"
+									 ng-model="password" no-spaces required/>
+						<div ng-messages="loginForm.password.$error"
+								 ng-messages-include="error-messages"
+								 ng-if='submitted'>
+							<div ng-message="required">Please enter your password.</div>
+						</div>
+					</md-input-container>
+					<md-button type="submit" flex ng-if="loginUI" layout="column"
+										 class="margin-0 margin-td-20 pad-lr-10 LoginSubmit"
+										 ng-click="$parent.submitted=true;">
+						Log In
+					</md-button>
+					<md-button type="submit" flex ng-if="recoveryUI" layout="column"
+										 class="margin-0 margin-td-20 pad-lr-10 LoginSubmit"
+										 ng-click="$parent.submitted=true">
+						Recover Account
+					</md-button>
+				</form>
+				<div flex layout="row" ng-if="loginUI" layout-align="center center">
+					<p class="icon-button primary-header" ng-click="loadRecovery()">Forgot Password?</p>
+				</div>
+				<div flex layout="row" ng-if="recoveryUI" layout-align="center center">
+					<p class="icon-button md-dark" ng-click="loadLogin()">
+						<md-icon class="material-icons">keyboard_backspace</md-icon>
+						Back to Login
+					</p>
+				</div>
+			</md-content>
+		</md-card>
+	</div>
+
+</div>

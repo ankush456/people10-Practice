@@ -1,0 +1,58 @@
+/*
+
+Globals.scss rule:
+
+Mark the variables to be put in global variables - which you think are used repeatedly to qualify for being a global value.
+
+Add comment as : /*G to mark the value as global
+
+*/
+
+/**
+* From index.scss
+*/
+
+@import "components/css/variables.scss";
+
+
+@charset 'utf-8';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto:400,700,700italic,400italic);
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  *{
+    outline: none; //remove outline from everywhere
+  }
+}
+
+.UIView {
+  @extend .overflow-y;
+  background: $page-background;
+  position: relative;
+  z-index: 50;
+}
+
+.witty-dialog {
+  max-height: 500px;
+}
+.cke_button__acronym_icon{
+  margin-top: 5px !important;
+}
+.md-autocomplete-suggestions-container li .highlight {
+  color: $primary-color;
+}
+md-menu-item > .md-button{
+  text-align: left;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+}
+
+.text-ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+/* Globals end here */

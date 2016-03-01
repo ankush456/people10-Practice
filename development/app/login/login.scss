@@ -1,0 +1,32 @@
+.LoginContainer {
+  background: $page-background;
+  .LoginTitle {
+    text-align: center;
+    color: $secondary-text-color;
+  }
+}
+.login-card-container{
+
+  min-width:400px;
+
+}
+.LoginCard {
+  background: #fff;
+  md-content {
+    background: #fff;
+  }
+  .FormInputs {
+    .LoginSubmit {
+      background: $primary-color;
+      span {
+        text-align: center;
+      }
+      align-items: center;
+      color: $primary-color-text;
+      border-bottom: solid 2px $primary-color-dark;
+      &:hover {
+        background: $primary-color-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/**
+* Overflow classes
+*/
+.overflow-h{
+  overflow: hidden;
+}
+.overflow-x{
+  @extend .overflow-h;
+  overflow-x: auto;
+}
+.overflow-y{
+  @extend .overflow-h;
+  overflow-y: auto;
+}
+.overflow-xy{
+  overflow: auto;
+}
+/* End overflow */
