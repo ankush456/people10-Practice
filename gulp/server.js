@@ -34,21 +34,12 @@ function browserSyncInit(baseDir, browser) {
    * For more details and option, https://github.com/chimurai/http-proxy-middleware/blob/v0.0.5/README.md
    */
   //var target = 'http://52.6.191.160:8080/';
-  var target = 'http://52.3.104.221:8080/';
-  var logServer = 'http://52.7.44.174:8080/';
-  var proxy1 = proxyMiddleware('/wittyparrot/api', {target: target});
-  var proxy2 = proxyMiddleware('/campaign/api', {target: target});
-  var proxy3 = proxyMiddleware('/linkedin-1.0-SNAPSHOT/recordtime', {target: logServer});
-  server.middleware = [proxy1,proxy2,proxy3];
+  var target = 'localhost:8080/';
 
   browserSync.instance =  browserSync.init({
           open: 'external',
           https: true,
-          /*https: {
-            key: "C:/xampp/apache/conf/ssl.key/wittyparrotsecret.key",
-            cert: "C:/xampp/apache/conf/ssl.crt/wittyparrot.com.crt"
-          },*/
-          host: 'dev2.wittyparrot.com',
+          host: 'dev.ankush.com',
           server: server
     });
 }

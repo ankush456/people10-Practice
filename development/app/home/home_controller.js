@@ -6,7 +6,7 @@
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($scope, collectionService) {
+  function HomeController($scope) {
 
-    }
+   }
 })();

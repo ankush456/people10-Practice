@@ -37,39 +37,13 @@
       }
       return parentFn(state);
     });
-
     $stateProvider
-      .state('unauthorized', {
-        url: '/error',
-        views: {
-          "side-view": {
-            templateUrl: "app/main/main.side-view.html"
-          },
-          "main-view": {
-            controller: 'HomeController',
-            templateUrl: 'app/home/unauthorizesd.html'
-          }
-        }
-      })
       .state('home', {
-        url: '/',
-        views: {
-          "side-view": {
-            templateUrl: "app/main/main.side-view.html"
-          },
-          "main-view": {
-            controller: 'HomeController',
-            templateUrl: 'app/home/home.html'
-          }
-        },
-        resolve: {
-          authenticated: function($q, $state, authFactory) {
-            return isAuthenticatedState($q, $state, authFactory);
-          }
-        }
+        url: "/home",
+        templateUrl: "app/home/home.html"
       })
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/home');
   }
 
 })();

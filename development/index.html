@@ -3,22 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <title>WittyParrot</title>
+  <title>People10</title>
   <meta name="description" content="">
   <!--<meta name="viewport" content="width=device-width">-->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
   <!-- Setting the root where all the files reside -->
-  <base href="/"></base>
-
-
-  <link rel="stylesheet" href="/assets/font/awiconfont.css">
-
 
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!--<link rel="stylesheet" type="text/css" href="external-libraries/ckeditor/contents.css">-->
-  <link rel="icon" href="favicon.ico" >
 
   <!-- build:css({.tmp/serve,development}) styles/vendor.css -->
   <!-- bower:css -->
@@ -43,14 +37,8 @@
     <![endif]-->
 
   <div flex layout="column" layout-fill class="main-md-content" ng-controller="MainController">
-
-    <wittyparrot-navbar ng-if="showPageLayout" class="globalNavBar" hidenav-status="hideSideNav">
-    </wittyparrot-navbar>
     <!--<input type="text" ng-model="hideNavBarr.value">{{hideNavBarr.value}}</input>-->
-    <md-content flex layout="row" class="overflow-h">
-
-      <div flex layout="column" ui-view="main-view" class="UIView"></div>
-    </md-content>
+      <div ui-view></div>
   </div>
 
   <!-- build:js(development) scripts/vendor.js -->
@@ -75,15 +63,11 @@
 
 
   <script src="app/main/main.controller.js"></script>
-  <script src="app/login/login.js"></script>
-  <script src="app/login/login.controller.js"></script>
   <script src="app/index.run.js"></script>
   <script src="app/index.route.js"></script>
   <script src="app/index.constants.js"></script>
   <script src="app/index.config.js"></script>
   <!-- endinject -->
   <!-- endbuild -->
-  <script src="external-libraries/ckeditor/ckeditor.js"></script>
-  <script src="external-libraries/twitter-text-validator/twitter-text.js"></script>
 </body>
 </html>
