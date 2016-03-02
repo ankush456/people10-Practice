@@ -37,10 +37,9 @@ function browserSyncInit(baseDir, browser) {
   var target = 'localhost:8080/';
 
   browserSync.instance =  browserSync.init({
-          open: 'external',
-          https: true,
-          host: 'dev.ankush.com',
-          server: server
+    startPath: '/',
+    server: server,
+    browser: browser
     });
 }
 
