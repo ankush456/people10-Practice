@@ -41,7 +41,7 @@ module.exports = function(config) {
       moduleName: 'webapp'
     },
 
-    browsers : ['PhantomJS'],
+    browsers : ['Chrome','PhantomJS'],
 
     plugins : [
       'karma-phantomjs-launcher',
