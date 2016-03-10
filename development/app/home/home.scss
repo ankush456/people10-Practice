@@ -1,19 +1,85 @@
-.div-check{
-  text-align: center;
+@import "../components/css/variables.scss";
+.main-nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  md-content{
+    background-color:$primary-color ;
+    button{
+      min-height: 34px;
+      min-width: 40px;
+      line-height: 0;
+    }
+    i,p{
+      color: $primary-color-text;
+    }
+  }
 }
-.gridListdemoBasicUsage md-grid-list {
-  margin: 8px; }
-.gridListdemoBasicUsage .gray {
-  background: #f5f5f5; }
-.gridListdemoBasicUsage .green {
-  background: #b9f6ca; }
-.gridListdemoBasicUsage .yellow {
-  background: #ffff8d; }
-.gridListdemoBasicUsage .blue {
-  background: #84ffff; }
-.gridListdemoBasicUsage .purple {
-  background: #b388ff; }
-.gridListdemoBasicUsage .red {
-  background: #ff8a80; }
-.gridListdemoBasicUsage md-grid-tile {
-  transition: all 400ms ease-out 50ms; }
+.main-content{
+  position: relative;
+  top: 50px;
+  overflow: auto;
+  height: 93%;
+  md-card{
+    max-width: 462px;
+    min-width: 398px;
+  }
+
+
+}
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon{
+  color:  $primary-color-text;
+}
+ md-tabs md-tabs-wrapper{
+  background-color: $primary-color;
+   color: $primary-color-text;
+}
+md-tabs .md-tab {
+color: $primary-color-text;
+}
+md-tabs md-ink-bar {
+  color: $tab-bottom-border;
+  background: $tab-bottom-border;
+}
+.uIView{
+  overflow: hidden;
+  height: 100%;
+}
+md-progress-linear .md-container .md-bar {
+  height: 10px;
+}
+md-progress-linear .md-container {
+  height: 10px;
+}
+.total-saved{
+  background-color: $primary-color;
+  text-align: center;
+  padding:5px 0 5px 0;
+  color: $primary-color-text;
+  font-size: 17px;
+  p{
+    display: inline-block;
+  }
+}
+.odd{
+  md-progress-linear .md-container .md-bar {
+    background-color: $primary-color;
+    color:#f83967 ;
+  }
+}
+
+
+
+
+
+//Speed dial styles
+
+.md-button.md-warn.md-fab:not([disabled]):hover {
+   background-color: $fab-background;
+
+}
+.md-button.md-warn.md-fab{
+  background-color: $fab-background;
+}

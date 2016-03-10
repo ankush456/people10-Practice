@@ -10,7 +10,6 @@ describe('The main view', function () {
   describe('Home Page check',function() {
     it('should check url', function () {
       expect(browser.getCurrentUrl()).toContain("localhost");
-      browser.pause();
     });
   });
 

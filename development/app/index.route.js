@@ -40,6 +40,7 @@
     $stateProvider
       .state('home', {
         url: "/home",
+        controller: 'HomeController',
         templateUrl: "app/home/home.html"
       })
 
